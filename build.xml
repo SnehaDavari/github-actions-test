@@ -22,24 +22,7 @@
            
 		<echo message="${productversionB}"/>
 		
-	<!--	
-		<if>
-         <available dir="${path}v${productversionB}\">
-		       <fileset dir="${path}v${productversionB}\">
-                        <include name="*.xml"/>
-                      </fileset>
-	     </available>
-         <then>
-                   <copy todir="${destination}">
-       
-	                  <fileset dir="${path}v${productversionB}\">
-                        <include name="*.xml"/>
-                      </fileset>
-                   </copy>
-         </then>
-
-        </if>
-		-->
+	 
 		
           <copy todir="${destination}" overwrite="yes" failonerror="false">
        
