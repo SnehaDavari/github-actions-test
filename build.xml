@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project basedir="." name="AntProject">
+
+    <property name = "path" value = "C:\NS_one\Trunk\NSEnterprise\src\com\ns\patch\"/>
+	<property name = "destination" value = "C:\Users\SDavari\Downloads\6.5.27\6.0.system.update\6.5.27.system.update\_db_updates"/>
+     
+	<target name="copyfile11">  
+	   
+	    <echo message="${productversionA}"/>
+         <loadresource property="productversionB">
+         <propertyresource name="productversionA"/>
+		 
+            <filterchain>
+              <tokenfilter>
+               <filetokenizer/>
+                 <replacestring from="." to=""/>
+              </tokenfilter>
+            </filterchain>
+		  	
+         </loadresource>
+           
+		<echo message="${productversionB}"/>
+		
+	<!--	
+		<if>
+         <available dir="${path}v${productversionB}\">
+		       <fileset dir="${path}v${productversionB}\">
+                        <include name="*.xml"/>
+                      </fileset>
+	     </available>
+         <then>
+                   <copy todir="${destination}">
+       
+	                  <fileset dir="${path}v${productversionB}\">
+                        <include name="*.xml"/>
+                      </fileset>
+                   </copy>
+         </then>
+
+        </if>
+		-->
+		
+          <copy todir="${destination}" overwrite="yes" failonerror="false">
+       
+	       <fileset dir="${path}v${productversionB}\">
+             <include name="*.xml"/>
+           </fileset>
+        </copy>
+		
+    </target> 
+	
+	 
+	
+</project>
