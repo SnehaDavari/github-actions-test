@@ -1,0 +1,10 @@
+git pull origin Branch1
+git init
+git remote add origin "url"
+git status
+git add Properties.docx (Adding into index)
+git add -A (Adding all the fies to index)
+git commit -a -m "message"  (Commiting all the files)
+git log (commit records)
+git branch firstbranch    (Create branch)
+git checkout firstbranch  (switching to the new branch with branch name)
