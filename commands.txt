@@ -8,3 +8,7 @@ git commit -a -m "message"  (Commiting all the files)
 git log (commit records)
 git branch firstbranch    (Create branch)
 git checkout firstbranch  (switching to the new branch with branch name)
+git merge firstbrach     (merging firstbranch to master)
+
+
+/////////////////////////
