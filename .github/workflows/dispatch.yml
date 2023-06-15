@@ -1,6 +1,13 @@
 name: dispatch receiver
 
-on: [repository_dispatch]
+on: 
+    repository_dispatch:
+        type: choice
+        description: Deploy from branch/tag
+        required: true
+        options:
+        - true
+        - false
 
 jobs:
   build:
