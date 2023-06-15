@@ -10,6 +10,7 @@ on:
 jobs:
     hello:
         runs-on: ubuntu-latest
+        permissions: write-all
 
         steps:
         - name: Echo Hello
