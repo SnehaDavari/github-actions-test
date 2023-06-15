@@ -1,6 +1,6 @@
 name: Container
 
-on: [push]
+on: repository_dispatch
 
 jobs:
    docker-steps:
