@@ -14,5 +14,8 @@ jobs:
 
         steps:
         - name: Echo Hello
-          run: echo "Hello ${{ github.event.inputs.name }}"
-               echo  ${{github.event.inputs.id}}
+          run: |
+               echo "Hello ${{ github.event.inputs.name }}"
+               echo  "Run id ${{github.event.inputs.id}}
+               run_id=${{ github.run_id }}
+               echo "::set-output name=run_id::$run_id"
