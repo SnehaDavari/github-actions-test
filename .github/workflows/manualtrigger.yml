@@ -14,8 +14,7 @@ jobs:
 
         steps:
         - name: Echo Hello
-          run: |
-               echo "Hello ${{ github.event.inputs.name }}"
+          run: echo "Hello ${{ github.event.inputs.name }}"
                echo  "Run id ${{github.event.inputs.id}}
                run_id=${{ github.run_id }}
-               echo "Run id $run_id"
+             
