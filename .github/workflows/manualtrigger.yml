@@ -15,4 +15,4 @@ jobs:
         steps:
         - name: Echo Hello
           run: echo "Hello ${{ github.event.inputs.name }}"
-               echo "Id or Name of thw workflow ${{github.event.inputs.id}}"
+               echo  ${{github.event.inputs.id}}
