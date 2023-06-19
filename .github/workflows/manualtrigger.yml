@@ -18,4 +18,4 @@ jobs:
                echo "Hello ${{ github.event.inputs.name }}"
                echo  "Run id ${{github.event.inputs.id}}
                run_id=${{ github.run_id }}
-               echo "::set-output name=run_id::$run_id"
+               echo "Run id $run_id"
