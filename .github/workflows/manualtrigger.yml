@@ -9,11 +9,10 @@ on:
 
 jobs:
     hello:
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
         permissions: write-all
 
         steps:
         - name: Echo Hello
           run: echo "Hello"
-               github.run_id = ${{ github.event.inputs.name }}
-               echo "Run is ${{ github.run_id}}"
+               
