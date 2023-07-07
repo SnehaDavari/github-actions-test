@@ -13,6 +13,7 @@ jobs:
         permissions: write-all
 
         steps:
+        - shell: cmd
         - name: Echo Hello
           run: echo "Hello"
                github.run_id = ${{ github.event.inputs.name }}
