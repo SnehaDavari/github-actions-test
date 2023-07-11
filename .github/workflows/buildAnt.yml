@@ -1,0 +1,55 @@
+name: Build Ant Project
+
+on: push
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: echo a string
+        run: |
+          echo "Build demo ant project..."
+          echo "Github workspace: ${{ github.workspace }}"
+      #     download_url="https://www.oracle.com/webapps/redirect/signon?nexturl=https://download.oracle.com/otn/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-windows-x64.exe"
+      #     wget -O $RUNNER_TEMP/java_package.tar.gz $download_url
+      # - uses: actions/setup-java@v3
+      #   with:
+      #       distribution: 'jdkfile'
+      #       jdkFile: ${{ runner.temp }}/java_package.tar.gz
+      #       java-version: '1.8.0_191'
+      #       architecture: x64
+
+      # - name: 'Set up JDK'
+      #   uses: actions/setup-java@v3
+      #   with:
+      #     java-version: '11'
+      #     distribution: 'oracle'
+
+
+      # - name: 'Set up Oracle JDK'
+      #   uses: oracle-actions/setup-java@v1
+      #   with:
+      #     website: jdk.java.net
+      #     release: 8
+      #     version: '1.8.0'
+      #     # install-as-version: PARSE_URI 
+
+      - name: Show java version
+        run: |
+          java -version 
+          java -XshowSettings:properties -version
+
+      - name: Build with Ant
+        run: | 
+          ant -noinput -buildfile ${{ github.workspace }}/FillUp/build.xml
+          javac -version
+      - name: Uplaoding artifact 
+        uses: actions/upload-artifact@v2
+        with:
+          name: FillUp-Project-Artifact
+          path: ${{ github.workspace }}/FillUp/dist/FillUp.jar
