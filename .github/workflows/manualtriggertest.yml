@@ -9,7 +9,7 @@ on:
 
 jobs:
     hello:
-        runs-on: self-hosted
+        runs-on: windows-latest
         permissions: write-all
 
         steps:
