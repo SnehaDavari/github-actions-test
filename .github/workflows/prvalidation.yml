@@ -17,9 +17,10 @@ jobs:
     - name: Verify PR name
       run: |
         pr_title=$(git log --format=%s -n 1 ${{ github.event.pull_request.head.sha }})
-        pattern="^NSE-.*"
+        echo "${pr_title}"
+        pattern="YOUR_DESIRED_PATTERN"
         if [[ ! $pr_title =~ $pattern ]]; then
         echo "Invalid PR name. Please follow the naming pattern: YOUR_DESIRED_PATTERN"
         exit 1
-       
+        
  
