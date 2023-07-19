@@ -7,19 +7,14 @@ on:
    - synchronize
 
 jobs:
-  enforce-pr-naming:
-   runs-on: ubuntu-latest
-
-   steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Verify PR name
-      run: |
-        pr_title=$(git log --format=%s -n 1 ${{ github.event.pull_request.head.sha }})
-        pattern="NSE-*"
-        if [[ ! $pr_title =~ $pattern ]]; then
-        echo "Invalid PR name. Please follow the naming pattern: YOUR_DESIRED_PATTERN"
-        exit 1
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: dylanvann/check-pull-request-title@v1
+        with:
+          # Match pull request titles in the form UI-1234 - Message.
+          pattern: '^NSE-\d* - '
+   
        
  
