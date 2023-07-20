@@ -20,7 +20,7 @@
 		  	
          </loadresource>
            
-		<echo message="${productversionB}"/>
+	<echo message="${productversionB}"/>
 		
 	 
 		
