@@ -11,7 +11,7 @@
          <loadresource property="productversionB">
          <propertyresource name="productversionA"/>
 		 
-            <filterchain>
+        <filterchain>
               <tokenfilter>
                <filetokenizer/>
                  <replacestring from="." to=""/>
