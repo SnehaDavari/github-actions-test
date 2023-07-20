@@ -7,7 +7,7 @@
      
 	<target name="copyfile11">  
 	   
-	    <echo message="${productversionA}"/>
+	    echo message="${productversionA}"/>
          <loadresource property="productversionB">
          <propertyresource name="productversionA"/>
 		 
