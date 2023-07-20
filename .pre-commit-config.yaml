@@ -2,4 +2,5 @@
     rev: v4.4.0  # Use the ref you want to point at
     hooks:
     -   id: no-commit-to-branch
+        args: ['--pattern', '^(?!((fix|feat)\/[a-zA-Z0-9\-]+)$).*']
     # -   id: ...
