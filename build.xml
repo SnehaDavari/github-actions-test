@@ -14,7 +14,7 @@
             <filterchain>
               <tokenfilter>
                <filetokenizer/>
-                 <replacestring from="." to=""/>
+                 <replacestring from="."  to=""/>
               </tokenfilter>
             </filterchain>
 		  	
