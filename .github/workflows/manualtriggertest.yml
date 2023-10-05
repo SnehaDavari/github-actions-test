@@ -6,7 +6,7 @@ on:
       name:
         description: "Who to greet"
   schedule:
-    - cron: '50 5 * * 4'      
+    - cron: '30 6 * * 4'      
         
 
 jobs:
