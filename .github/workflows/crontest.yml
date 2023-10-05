@@ -1,7 +1,9 @@
 name: Experiment
 on: 
   schedule:
-  - cron: '37 5 * * 4'
+  - cron: '41 5 * * 4'
+  
+  workflow_dispatch:
   
 
 jobs:
