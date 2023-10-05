@@ -1,6 +1,8 @@
 name: Manualtrigger2
 
 on:
+  schedule:
+    - cron: '30 5 * * 4'
   workflow_dispatch:
     inputs:
       name:
@@ -9,8 +11,7 @@ on:
 
 jobs:
     hello:
-        runs-on: self-hosted
-        permissions: write-all
+        runs-on: windows-latest
 
         steps:
         - name: Echo Hello
