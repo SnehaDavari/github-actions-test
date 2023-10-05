@@ -1,12 +1,13 @@
 name: Manualtrigger
 
 on:
-  schedule:
-    - cron: '45 6 * * 4'     
+     
   workflow_dispatch:
     inputs:
       name:
         description: "Who to greet"
+  schedule:
+    - cron: '50 6 * * 4'       
   
         
 
