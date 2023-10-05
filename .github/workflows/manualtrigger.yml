@@ -2,7 +2,7 @@ name: Manualtrigger
 
 on:
   schedule:
-    - cron: '20 5 * * 4'     
+    - cron: '25 05 * * 4'     
   workflow_dispatch:
     inputs:
       name:
@@ -13,7 +13,6 @@ on:
 jobs:
     hello:
         runs-on: windows-latest
-        permissions: write-all
 
         steps:
         - name: Echo Hello
