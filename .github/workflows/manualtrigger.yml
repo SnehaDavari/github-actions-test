@@ -2,7 +2,7 @@ name: Manualtrigger
 
 on:
   schedule:
-    - cron: '40 13 * * *'     
+    - cron: '10 5 * * *'     
   workflow_dispatch:
     inputs:
       name:
