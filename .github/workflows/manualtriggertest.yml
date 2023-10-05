@@ -1,12 +1,12 @@
 name: Manualtrigger2
 
 on:
-  schedule:
-    - cron: '45 5 * * 4'
   workflow_dispatch:
     inputs:
       name:
         description: "Who to greet"
+  schedule:
+    - cron: '50 5 * * 4'      
         
 
 jobs:
