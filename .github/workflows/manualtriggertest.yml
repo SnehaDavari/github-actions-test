@@ -1,17 +1,11 @@
 name: Manualtrigger2
 
-on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: "Who to greet"
-  schedule:
-    - cron: '30 6 * * 4'      
+on: push    
         
 
 jobs:
     hello:
-        runs-on: windows-latest
+        runs-on: ubuntu-latest
 
         steps:
         - name: Echo Hello
