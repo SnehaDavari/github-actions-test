@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: echo a string
         run: |
-          echo "Testing github self hosted runner on linux..."
+          echo "Testing github self hosted runner on linux.."
