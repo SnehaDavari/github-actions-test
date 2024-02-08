@@ -2,7 +2,7 @@
 
 <project basedir="." name="AntProject">
 
-    <property name = "path" value = "C:\NS_one\Trunk\NSEnterprise\src\com\ns\patch\"/>
+    <property name = "path" value = "C:\NS_one\Trunk\NSEnterprise\src\com\ns\\"/>
 	<property name = "destination" value = "C:\Users\SDavari\Downloads\6.5.27\6.0.system.update\6.5.27.system.update\_db_updates"/>
      
 	<target name="copyfile11">  
