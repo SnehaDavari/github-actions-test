@@ -1,12 +1,5 @@
 name: 'Assert Branch Naming Convention'
-on: 
-  pull_request_target:
-     types:
-      - opened
-      - edited
-      - synchronize
-      - labeled
-      - unlabeled
+on: pull_request
 
 jobs:
   branch-naming-rules:
